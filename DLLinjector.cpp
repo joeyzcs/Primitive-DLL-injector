@@ -1,7 +1,8 @@
  /********************************
- * Title :  DLL injector
- * Author : Joey
- * Date :   8/7/2024
+ * Title :          DLL injector
+ * Description :    Injects a DLL into a target progress by allocating memory and executing LoadLibraryA
+ * Author :         Joey
+ * Date :           8/7/2024
  ********************************/
 
 #include <iostream>
@@ -18,7 +19,7 @@ int main()
 
     /* Take user input for DLL name */
     std::string dllName;
-    std::cout << "Enter DLL name ( same path as injector ): ";
+    std::cout << "Enter DLL name or path: ";
     std::cin >> dllName;
     
 
@@ -59,7 +60,7 @@ int main()
         return -1;
     }
 
-    std::cout << "Base address: " << memAlloc << std::endl;;
+    std::cout << "Base address: " << memAlloc << std::endl;
 
 
     /* Write the DLL path into the allocated memory region */
